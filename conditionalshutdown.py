@@ -73,12 +73,12 @@ logfile_path = "logfile.log"
 # not reachable only once and for a short time). `REQUIRED_OFFLINE_SECONDS`
 # defines the time interval that all hosts need to be offline before shutdown
 # is invoked. Something like 5 minutes is recommended, i.e. 300 s.
-REQUIRED_OFFLINE_SECONDS = 40
+REQUIRED_OFFLINE_SECONDS = 300
 
 # `POLLING_INTERVAL_SECONDS` specifies how frequently the list of hosts should
 # be checked during the time interval specified above. Checking every thirty
 # seconds within five minutes would be a reasonable choice.
-POLLING_INTERVAL_SECONDS = 10
+POLLING_INTERVAL_SECONDS = 30
 
 
 # Make sure that hosts are tested multiple times within

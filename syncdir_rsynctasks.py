@@ -113,7 +113,7 @@ class SyncDirTask(object):
         logfname = "rsync_stdouterr_%s_%s.log" % (self.name, timestr())
         logpath = os.path.join(self._logfile_dir, logfname)
         rsync_cmd = [
-            "rsync",
+            "/usr/local/bin/rsync",
             "--archive",
             "--verbose",
             "--hard-links",
@@ -136,6 +136,7 @@ class SyncDirTask(object):
                     log.error("rsync returncode not 0: %s", rcode)
             except OSError as e:
                 log.error("OSError while executing rsync: %s", e)
+                return
             duration = time() - t0
             log.info("rsync runtime (walltime): %s", seconds_to_hms(duration))
             self._duration = duration

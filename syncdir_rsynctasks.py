@@ -118,6 +118,7 @@ class SyncDirTask(object):
             "--verbose",
             "--hard-links",
             "--delete",
+            "--fuzzy",
             "--stats",
             self._source_dir,
             self._target_dir,
